@@ -1,16 +1,11 @@
-# travel_app
+# TravelAppUI
+I took this design as an example.[(Design)](https://www.figma.com/community/file/1071010102918605864 "Design")
 
-A new Flutter project.
+I used the "shared preferences" dependecy so that the onboarding screen only appears once.
 
-## Getting Started
+<img src="https://github.com/onurduyar/TravelAppUI/blob/main/review.gif" width="200"/>
 
-This project is a starting point for a Flutter application.
+### Todo-List
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- [ x] Add detail screen.
+- [ ] Fix fonts.  
