@@ -52,11 +52,11 @@ class SecondTravelCard extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.only(top: 15),
                       child: Row(
-                        children: const [
-                          SizedBox(
+                        children: [
+                          const SizedBox(
                             width: 60,
                           ),
-                          Text('52 reviews')
+                          Text('${cardContentList[index].reviews}' ' Reviews'),
                         ],
                       ),
                     )

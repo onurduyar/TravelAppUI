@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:travel_app/constants/app_constants.dart';
 import 'package:travel_app/models/home_page_card_model.dart';
+import 'package:travel_app/screens/detail_screen.dart';
 
 class FirstTravelCard extends StatelessWidget {
   const FirstTravelCard({required this.index, Key? key}) : super(key: key);
@@ -23,13 +24,23 @@ class FirstTravelCard extends StatelessWidget {
               Expanded(
                 child: Padding(
                   padding: const EdgeInsets.only(bottom: 10),
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(20),
-                    child: SizedBox(
-                      width: 240,
-                      child: Image.asset(
-                        cardContentList[index].cardImagePath,
-                        fit: BoxFit.cover,
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => DetailScreen(
+                                    index: index,
+                                  )));
+                    },
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(20),
+                      child: SizedBox(
+                        width: 240,
+                        child: Image.asset(
+                          cardContentList[index].cardImagePath,
+                          fit: BoxFit.cover,
+                        ),
                       ),
                     ),
                   ),
@@ -56,17 +67,27 @@ class FirstTravelCard extends StatelessWidget {
                       ),
                     ],
                   ),
-                  Container(
-                    decoration: BoxDecoration(
-                      color: myPrimaryColor,
-                      borderRadius: BorderRadius.circular(4),
-                    ),
-                    width: 20,
-                    height: 20,
-                    child: const Icon(
-                      Icons.arrow_right,
-                      color: Colors.white,
-                      size: 16,
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => DetailScreen(
+                                    index: index,
+                                  )));
+                    },
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: myPrimaryColor,
+                        borderRadius: BorderRadius.circular(4),
+                      ),
+                      width: 20,
+                      height: 20,
+                      child: const Icon(
+                        Icons.arrow_right,
+                        color: Colors.white,
+                        size: 16,
+                      ),
                     ),
                   ),
                 ],

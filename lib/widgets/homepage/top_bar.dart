@@ -12,7 +12,7 @@ class TopBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(left: 30, right: 30, bottom: 4),
+      margin: const EdgeInsets.only(top: 30, left: 30, right: 30, bottom: 4),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [

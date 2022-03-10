@@ -9,25 +9,27 @@ class Popular extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: const [
-            Header(text: 'Popular'),
-            ViewAllText(),
-          ],
-        ),
-        SizedBox(
-          height: 120,
-          child: ListView.builder(
-              scrollDirection: Axis.horizontal,
-              itemCount: cardContentList.length,
-              itemBuilder: ((context, index) {
-                return SecondTravelCard(index: index);
-              })),
-        ),
-      ],
+    return Expanded(
+      child: Column(
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: const [
+              Header(text: 'Popular'),
+              ViewAllText(),
+            ],
+          ),
+          SizedBox(
+            height: 102,
+            child: ListView.builder(
+                scrollDirection: Axis.horizontal,
+                itemCount: cardContentList.length,
+                itemBuilder: ((context, index) {
+                  return SecondTravelCard(index: index);
+                })),
+          ),
+        ],
+      ),
     );
   }
 }

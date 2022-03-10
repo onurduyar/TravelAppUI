@@ -9,25 +9,27 @@ class OurPropertiesWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: const [
-            Header(text: 'Our Properties'),
-            ViewAllText(),
-          ],
-        ),
-        SizedBox(
-          height: 200,
-          child: ListView.builder(
-              scrollDirection: Axis.horizontal,
-              itemCount: cardContentList.length,
-              itemBuilder: ((context, index) {
-                return FirstTravelCard(index: index);
-              })),
-        ),
-      ],
+    return Expanded(
+      child: Column(
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: const [
+              Header(text: 'Our Properties'),
+              ViewAllText(),
+            ],
+          ),
+          SizedBox(
+            height: 180,
+            child: ListView.builder(
+                scrollDirection: Axis.horizontal,
+                itemCount: cardContentList.length,
+                itemBuilder: ((context, index) {
+                  return FirstTravelCard(index: index);
+                })),
+          ),
+        ],
+      ),
     );
   }
 }

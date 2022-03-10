@@ -20,8 +20,8 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey.shade200,
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.symmetric(vertical: 20),
+      body: Padding(
+        padding: const EdgeInsets.only(bottom: 20),
         child: Column(
           children: const [
             TopBar(),
